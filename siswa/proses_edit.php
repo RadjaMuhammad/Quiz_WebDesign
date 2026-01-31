@@ -11,7 +11,7 @@
     $alamat = $_POST['alamat'];
     $email = $_POST['email'];
     $jenis_kelamin = $_POST['jenis_kelamin'];
-    $nama_gelombang = $_POST['nama_gelombang'];
+    $gelombang = $_POST['gelombangs_id'];
     $jurusan = $_POST['jurusans_id'];
     $nama_foto = $_FILES['foto']['name'];
     $tmp_foto = $_FILES['foto']['tmp_name'];
@@ -29,7 +29,7 @@
         }
         #3. Query Insert (proses edit data)
         $query = "UPDATE biodata SET nama='$nama', nisn='$nisn', tempat_lahir='$tempat_lahir', 
-        tgl_lahir='$tgl_lahir', alamat='$alamat', email='$email', jenis_kelamin='$jenis_kelamin',gelombang_id='$gelombang',  jurusans_id='$jurusan', foto='$nama_foto' 
+        tgl_lahir='$tgl_lahir', alamat='$alamat', email='$email', jenis_kelamin='$jenis_kelamin',gelombangs_id='$gelombang',  jurusans_id='$jurusan', foto='$nama_foto' 
         WHERE id='$id'";
 
         #hapus foto
@@ -43,7 +43,7 @@
     }else{
         #3. Query Insert (proses edit data)
         $query = "UPDATE biodata SET nama='$nama', nisn='$nisn', tempat_lahir='$tempat_lahir', 
-        tgl_lahir='$tgl_lahir', alamat='$alamat', email='$email', jenis_kelamin='$jenis_kelamin',gelombang_id='$gelombang',  jurusans_id='$jurusan' 
+        tgl_lahir='$tgl_lahir', alamat='$alamat', email='$email', jenis_kelamin='$jenis_kelamin',gelombangs_id='$gelombang',  jurusans_id='$jurusan' 
         WHERE id='$id'";
     }
 

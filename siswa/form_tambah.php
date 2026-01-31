@@ -69,7 +69,8 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Gelombang</label>
-                                <select class="form-control" name="nama_gelombang" id="">
+                                <select class="form-control" name="gelombangs_id" id="">
+                                    <option value="">-Pilih Jurusan-</option>
                                     <?php
                                     //kode untuk looping datat jurusan
                                     include_once('../koneksi.php');
@@ -79,7 +80,7 @@
                                     ?>
                                         <option value="<?= $item_gel['id'] ?>"><?= $item_gel['nama_gelombang'] ?></option>
                                     <?php
-                                        //penutup kode looping jurusan
+                                        //penutup kode looping jurusanF
                                     }
                                     ?>
                                 </select>

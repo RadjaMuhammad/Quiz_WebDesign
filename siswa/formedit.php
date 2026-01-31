@@ -77,16 +77,16 @@ $data = mysqli_fetch_array($edit);
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Gelombang</label>
-                                <select class="form-control" name="nama_gelombang" id="">
+                                <select class="form-control" name="gelombangs_id" id="">
                                     <option value="">-Pilih Jurusan-</option>
                                     <?php
                                     //kode untuk looping datat jurusan
                                     include_once('../koneksi.php');
-                                    $qry_gel = "SELECT * FROM gelombang";
+                                    $qry_gel = "SELECT * FROM gelombang_pendaftaran";
                                     $data_gel = mysqli_query($koneksi, $qry_gel);
                                     foreach ($data_gel as $item_gel) {
                                     ?>
-                                        <option <?php echo $data['gelombangs_id'] == $item_gel['nama_gelombang'] ? 'selected' : '' ?> value="<?= $item_gel['tanggal_mulai'] ?>"><?= $item_gel['tanggal_selesai'] ?> - <?= $item_gel['status'] ?></option>
+                                        <option <?php echo $data['gelombangs_id'] == $item_gel['id'] ? 'selected' : '' ?> value="<?= $item_gel['id'] ?>"> - <?= $item_gel['nama_gelombang'] ?></option>
                                     <?php
                                         //penutup kode looping jurusan
                                     }
